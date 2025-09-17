@@ -14,7 +14,7 @@ import ru.practicum.shareit.user.dto.UserDtoRequestUpdate;
 @Service
 public class UserClient extends BaseClient {
     @Autowired
-    public UserClient(@Value("http://localhost:9090") String serverUrl, RestTemplateBuilder builder) {
+    public UserClient(@Value("http://shareit-server:9090") String serverUrl, RestTemplateBuilder builder) {
         super(
                 builder
                         .uriTemplateHandler(new DefaultUriBuilderFactory(serverUrl + "/users"))

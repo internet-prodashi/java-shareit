@@ -15,7 +15,7 @@ import java.util.Map;
 @Service
 public class ItemRequestClient extends BaseClient {
     @Autowired
-    public ItemRequestClient(@Value("http://localhost:9090") String serverUrl, RestTemplateBuilder builder) {
+    public ItemRequestClient(@Value("http://shareit-server:9090") String serverUrl, RestTemplateBuilder builder) {
         super(
                 builder
                         .uriTemplateHandler(new DefaultUriBuilderFactory(serverUrl + "/requests"))
